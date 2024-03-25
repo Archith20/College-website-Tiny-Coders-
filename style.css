@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgb(213, 93, 93);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    }
+
+.navigation .btnLogin-popup{
+width: 130px;
+height: 50px;
+background: transparent;
+border: 2px solid #fff;
+outline: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1.1em;
+color:#fff;
+font-weight: 500;
+margin-left: 40px;
+transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+background: #fff;
+color:#162938;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 2rem;
+    
+}
+
+h1, p {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-container input {
+    display: none;
+}
+
+.rating-container label {
+    font-size: 20px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.rating-container label:hover,
+.rating-container label.checked {
+    color: gold;
+}
+
+/* Styles for the header and navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .navigation {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation a {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .navigation a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Styles for the dropdown menu */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  
+  /* Styles for the counselling section */
+.counselling-section {
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.counselling-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.counselling-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.counselling-card {
+  width: 30%;
+  margin: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.counselling-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.counselling-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.counselling-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.counselling-card p {
+  line-height: 1.5;
+}
+
+.counselling-card a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.counselling-card a:hover {
+  background-color: #ddd;
+}
+
+
+/* Styles for the support desk section */
+.support-desk {
+  padding: 2rem;
+}
+
+.support-desk h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.support-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.support-card {
+  width: 30%;
+  margin: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.support-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.support-card i {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.support-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.support-card p {
+  line-height: 1.5;
+}
+
+.support-card a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.support-card a:hover {
+  background-color: #ddd;
+}
+
+
+  
+/* Styles for the faculty list section */
+.faculty-list {
+  padding: 2rem;
+}
+
+.faculty-list h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.faculty-members {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.faculty-card {
+  width: 30%;
+  margin: 1rem;
+  background-color: #eee;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.faculty-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.faculty-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.faculty-card p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.faculty-card a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.faculty-card a:hover {
+  background-color: #ddd;
+}
+
+
+.faculty-list {
+  padding: 2rem;
+}
+
+.faculty-list h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.faculty-members {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.faculty-card {
+  width: 30%;
+  margin: 1rem;
+  background-color: #eee;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.faculty-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.faculty-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.faculty-card p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.faculty-card a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.faculty-card a:hover {
+  background-color: #ddd;
+}
+
+
+.faculty-list {
+  padding: 2rem;
+}
+
+.faculty-list h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.faculty-members {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.faculty-card {
+  width: 30%;
+  margin: 1rem;
+  background-color: #eee;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.faculty-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.faculty-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.faculty-card p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.faculty-card a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.faculty-card a:hover {
+  background-color: #ddd;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.departments {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.departments h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.departments ul {
+  list-style: none;
+  padding: 0;
+}
+
+.departments li {
+  margin-bottom: 10px;
+}
+
+.departments a {
+  text-decoration: none;
+  color: #000;
+}
+
+.departments a:hover {
+  color: #333;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background-color: #eee;
+  padding: 10px 20px;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+header nav {
+  float:center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+main {
+  padding: h20px;
+}
+
+.featured-game {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.featured-game img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.featured-game .game-info {
+  padding: 30px;
+   margin-bottom: 20px;
+
+  flex: 1px;
+ 
+}
+
+.featured-game h3,
+.featured-game p {
+  margin-bottom: 5px;
+}
+
+.sports-list,
+.news-feed {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.sports-list h2,
+.news-feed h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sports-list ul,
+.news-feed ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sports-list li,
+.news-feed li {
+  margin-bottom: 10px;
+}
+
+
+.one{
+  padding-left: 40%;
+
+}

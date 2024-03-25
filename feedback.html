@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Feedback</title>
+</head>
+<body>
+    
+<h1>Your Feedback Matters</h1>
+<p>Please share your experience with us.</p>
+
+<form id="feedback-form">
+    <div class="form-group">
+        <label for="name">Your Name (Optional):</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label for="email">Email (Optional):</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+    </div>
+    <div class="form-group">
+        <label for="rating">Rating:</label>
+        <div class="rating-container">
+            <input type="radio" id="star-5" name="rating" value="5">
+            <label for="star-5" class="fas fa-star"></label>
+            <input type="radio" id="star-4" name="rating" value="4">
+            <label for="star-4" class="fas fa-star"></label>
+            <input type="radio" id="star-3" name="rating" value="3">
+            <label for="star-3" class="fas fa-star"></label>
+            <input type="radio" id="star-2" name="rating" value="2">
+            <label for="star-2" class="fas fa-star"></label>
+            <input type="radio" id="star-1" name="rating" value="1">
+            <label for="star-1" class="fas fa-star"></label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="Share your thoughts and suggestions"></textarea>
+    </div>
+    <button type="submit">Submit Feedback</button>
+</form>
+<script src="script.js"> </script>
+    
+</body>
+</html>
+
+
